@@ -26,12 +26,15 @@ while True:
       if (id==id1 and pin==pin1):
         print("your name is ", name1)
         isreal= True
+        wrong = 0
       elif(id==id2 and pin==pin2):
         print("your name is ", name2)
         isreal= True
+        wrong = 0
       elif(id==id3 and pin==pin3):
         print("your name is ", name3)
         isreal= True
+        wrong = 0
       else:
         print("invalid id or pin \n")
         wrong+=1
@@ -42,10 +45,11 @@ while True:
         break
       else:
        while True:
-         print("1.Check Balance \n2.Withdraw Money \n3.Deposit Money \n4.Exit")
-
-         choice=int(input("enter your choice"))
          if(isreal):
+          
+          print("1.Check Balance \n2.Withdraw Money \n3.Deposit Money \n4.Exit")
+
+          choice=int(input("enter your choice"))
           if(choice==1):
            if(id==id1):
             print("your balance is ", bal1)
@@ -76,7 +80,7 @@ while True:
                 else:
                  bal3-=withdraw
                  print("your balance is ", bal3)
-          elif(choice==3):     
+          elif(choice==3):
             deposit=int(input("enter the amount you want to deposit"))
             if(id==id1):
               bal1+=deposit
